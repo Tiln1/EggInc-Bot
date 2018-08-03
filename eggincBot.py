@@ -276,6 +276,7 @@ async def ping(ctx):
         
         egg = discord.utils.get(roles, name="Eggs")
         chicken = discord.utils.get(roles, name="Chickens")
+        gig3 = discord.utils.get(roles, name="Gigafarmer III")
 #         for m in ml:
 #             for f in farmers:
 #                 if egg in m.roles and f in m.roles:
@@ -295,10 +296,13 @@ async def ping(ctx):
                     print(num2)
             for f in farmers:
                 if f in m.roles and (egg in m.roles or chicken in m.roles):
-                    await client.remove_roles(m, egg)
+                    await client.remove_roles(m, *[egg, chicken])
                     num2+=1
                     print(num2)
                     break
+            for f in farmers[12:15]:
+                if discord.utils.get(roles, name=f) in m.roles and gig3 not in m.roles:
+                    await client.add_roles(m, gig3)
         await client.delete_message(ctx.message)
 #         emoj = "#⃣ 🆎 🆑 🆔 🆖 🆗 🆘 🆚 🚾 ❗ ‼ ❓ ⁉ 🆒 🆕 🆓".split(" ")
 #         st = ""

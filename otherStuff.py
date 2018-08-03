@@ -97,7 +97,7 @@ class HelpMethods(object):
                 nu = False
                 newcontent += "\n"
                 if len(str(num)) == 1: newcontent += "0"
-                newcontent += str(num) + " " + username + "\n" + "   " + str(score)
+                newcontent += str(num) + " " + username + "\n" + " "*6 + str(score)
             if not nam == username and not nu:
                 plusone = contents[x-1][2:]
                 newcontent += "\n"
@@ -113,7 +113,7 @@ class HelpMethods(object):
             
         while(len(newcontent) > 1996):
             newcontent = newcontent.rsplit("\n", 2)[0]
-        newcontent += "\n```"
+        newcontent += "\n"
     
         file = open(filename, "w")
         file.write(newcontent)
@@ -153,24 +153,29 @@ class HelpMethods(object):
         async for x in client.logs_from(channel):
             date = str(datetime.datetime.utcnow()).replace(" ", "-").replace(":", "")
             if "Prestige Count" in x.content and (lb == None or lb == "prestiges"):
-                file = open("prestiges.txt")
+                filer = open("prestiges.txt", "r")
+                if lb == None: lebo = "prestiges" 
                 filebackup = open(os.path.dirname(__file__) + "/../pc/"+ date +".txt", "w+")
             elif "Soul Eggs" in x.content and (lb == None or lb == "souleggs"):
-                file = open("souleggs.txt")
+                filer = open("souleggs.txt","r")
+                if lb == None: lebo = "souleggs" 
                 filebackup = open(os.path.dirname(__file__) + "/../se/"+ date +".txt", "w+")
             elif "Drone Takedowns" in x.content and (lb == None or lb == "drones"):
-                file = open("drones.txt")
+                filer = open("drones.txt", "r")
+                if lb == None: lebo = "drones" 
                 filebackup = open(os.path.dirname(__file__) + "/../dt/"+ date +".txt", "w+")
             elif "OoM" in x.content and (lb == None or lb == "oom"):
-                file = open("oom.txt")
+                filer = open("oom.txt", "r")
+                if lb == None: lebo = "oom" 
                 filebackup = open(os.path.dirname(__file__) + "/../oom/"+ date +".txt", "w+")
-            try:
-                filebackup.write(file.read())
+#             try:
+                filebackup.write(filer.read())
                 if getlb:
-                    file.write(x.content)  
-                file.close
+                    filew = open(lb or lebo + ".txt", "w")
+                    filew.write(x.content)  
+                    filew.close
                 filebackup.close
-            except: print(x.content)
+#             except: print(x.content)
 
         
     def cap(self, toCap):
