@@ -5,7 +5,7 @@
 02 JensDev#6700
       161643
 03 Tiln#0416
-      120408
+      120412
 04 AndyVshr#1639
       30405
 05 Raging-Monkey#6885
@@ -29,7 +29,7 @@
 14 JustMe2So#0069
       1448
 15 Parker#1126
-      1337
+      1380
 16 Evanw68#7812
       1200
 17 Soarax#6347
@@ -58,85 +58,85 @@
       802
 29 Jlaws804#2182
       742
-30 MrGhostlore#0506
+30 Aggiemd91#4484
+      687
+31 MrGhostlore#0506
       678
-31 Tehsoul#5061
+32 Tehsoul#5061
       671
-32 Aggiemd91#4484
-      639
-33 Moto81#5550
+33 Elessar49#8046
+      591
+34 Moto81#5550
       552
-34 Nurion#7043
+35 Nurion#7043
       540
-35 Ahosaz#9699
+36 Ahosaz#9699
       496
-36 Deegobooster#2391
+37 Deegobooster#2391
       471
-37 ViperVwV#3465
+38 ViperVwV#3465
       451
-38 Barfghost#6218
+39 Barfghost#6218
       446
-39 Emporium#1013
+40 Emporium#1013
       444
-40 Senor mongoose#2227
+41 Senor mongoose#2227
       425
-41 QuazzleTheQaz#6881
+42 TileZ#2271
+      376
+43 QuazzleTheQaz#6881
       368
-42 QuazzleTheQaz#6881 
+44 QuazzleTheQaz#6881 
       366
-43 Pball52998#1609
+45 VIZE#0001
+      356
+46 Benjamin#0007
+      353
+47 Pball52998#1609
       350
-44 Pudywardy#1102
+48 Pudywardy#1102
       348
-45 Numblok#0583
+49 Numblok#0583
       345
-46 Kobaia#3772
+50 Kobaia#3772
       335
-47 Notkoshka#8145
+51 BosGT4#6387
+      331
+52 Notkoshka#8145
       324
-48 CoDavis3#9073
+53 CoDavis3#9073
       320
-49 Player3Th0mas#8008
+54 Player3Th0mas#8008
       318
-50 TCollett#2423
+55 TCollett#2423
       314
-51 SkylarWeston ?#4198
+56 SkylarWeston ?#4198
       298
-52 Dexderr#2126
+57 Dexderr#2126
       295
-53 SlytherinKyo#1039
+58 SlytherinKyo#1039
       280
-54 Rebillihp#9457
+59 Rebillihp#9457
       273
-55 ArkenX#0440
+60 ArkenX#0440
       268
-56 Giveen#5391
-      263
-57 Klnrnbkr#8035
+61 Giveen#5391
+      264
+62 Klnrnbkr#8035
       260
-58 Frisbee Reverse Trap Emmett#0891
+63 Frisbee Reverse Trap Emmett#0891
       257
-59 Jax#2985
+64 Jax#2985
       252
-60 Carl#7309
+65 Carl#7309
       251
-61 Astrophnoob#8293
+66 Astrophnoob#8293
       251
-62 BosGT4#6387
-      244
-63 TCollett#2423 
+67 Layne2216#0644
+      250
+68 TCollett#2423 
       241
-64 Saltyii#3830
+69 Saltyii#3830
       241
-65 Florida#4908
-      229
-66 Updog#5661
-      228
-67 Dreamwalker#2587
-      217
-68 Blackshroud#5096
-      211
-69 Mam711#7802
-      209
-70 Lmjacks2#1199
-      192
+70 Mam711#7802
+      232

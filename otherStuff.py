@@ -6,6 +6,7 @@ Created on May 12, 2018
 import math
 import os.path
 import datetime
+import json
 
 import discord
 class HelpMethods(object):
@@ -90,26 +91,27 @@ class HelpMethods(object):
         for x in range(3, len(contents), 2):
             num = math.trunc((x-3)/2+1)
             sol = contents[x].replace(",", "").replace(".", "").replace(" ", "")
-            nam = contents[x-1][3:]
-            if namu:
-                num -= 1
-            if numscore > int(sol) and nu:
-                nu = False
-                newcontent += "\n"
-                if len(str(num)) == 1: newcontent += "0"
-                newcontent += str(num) + " " + username + "\n" + " "*6 + str(score)
-            if not nam == username and not nu:
-                plusone = contents[x-1][2:]
-                newcontent += "\n"
-                if len(str(num+1)) == 1: newcontent += "0"
-                newcontent += str(num+1) + plusone + "\n" + contents[x]
-            elif nu and not nam == username:
-                plusone = contents[x-1][2:]
-                newcontent += "\n"
-                if len(str(num)) == 1: newcontent += "0"
-                newcontent += str(num) + plusone + "\n" + contents[x]
-            elif nam == username:
-                namu = True
+            if len(sol) > 2:
+                nam = contents[x-1][3:]
+                if namu:
+                    num -= 1
+                if numscore > int(sol) and nu:
+                    nu = False
+                    newcontent += "\n"
+                    if len(str(num)) == 1: newcontent += "0"
+                    newcontent += str(num) + " " + username + "\n" + " "*6 + str(score)
+                if not nam == username and not nu:
+                    plusone = contents[x-1][2:]
+                    newcontent += "\n"
+                    if len(str(num+1)) == 1: newcontent += "0"
+                    newcontent += str(num+1) + plusone + "\n" + contents[x]
+                elif nu and not nam == username:
+                    plusone = contents[x-1][2:]
+                    newcontent += "\n"
+                    if len(str(num)) == 1: newcontent += "0"
+                    newcontent += str(num) + plusone + "\n" + contents[x]
+                elif nam == username:
+                    namu = True
             
         while(len(newcontent) > 1996):
             newcontent = newcontent.rsplit("\n", 2)[0]
@@ -189,6 +191,17 @@ class HelpMethods(object):
         for x in farmers:
             if x in message.author.roles:
                 return x
+    
+    
+    def updatetoEOTW(self, member):
+        file = open('updaters.json', 'r+')
+        updaters = json.load(file)
+        file.close()
+        amnt = updaters.get(member.name) or 0
+        updaters.update({member.name:amnt+1})
+        file = open('updaters.json', 'w+')
+        file.write(json.dumps(updaters))
+        file.close()
     
     
 #   async def images(self, imageUrl, message, client):

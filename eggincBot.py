@@ -13,6 +13,8 @@ import numpy as np
 import os.path
 from googlesearch import search
 import platform
+import json
+from operator import itemgetter
 
 import discord
 from discord.ext import commands
@@ -20,6 +22,9 @@ from discord.ext.commands import Bot
 
 from EggIncBot.otherStuff import HelpMethods
 from _ast import Await
+
+import requests
+import justext
 
 # Here you can modify the bot's prefix and description and wether it sends help in direct messages or not.
 client = Bot(description="Tiln's Egg Inc EggInc", command_prefix="e!", pm_help = False)
@@ -79,12 +84,16 @@ async def on_message(message):
                 elif "," in x and user:
                     if len(x) == 5:
                         await hm.updatelb("oom.txt", user, x, "457715280152363018", client)
-                    elif len(x) < 9:
+                        hm.updatetoEOTW(message.author)
+                    elif len(x) < 10:
                         await hm.updatelb("drones.txt", user, x, "457715344367288331", client)
+                        hm.updatetoEOTW(message.author)
                     elif len(x) > 14:
                         await hm.updatelb("souleggs.txt", user, x, "457715345546018828", client)
+                        hm.updatetoEOTW(message.author)
                 elif user:
                     await hm.updatelb("prestiges.txt", user, x, "457715346615566338", client)
+                    hm.updatetoEOTW(message.author)
         elif str(message.channel) == "role-submissions" and (message.content.startswith("+") or message.content.startswith("-")):
             time = message.timestamp
             pref = message.content[0]
@@ -170,6 +179,7 @@ async def on_message(message):
                 await client.send_message(message.channel, start + mid + " decreases their role from " + prev + " to " + new +"." + end)
                 await client.send_message(client.get_channel("455486044490694696"), start + altmid + " decreases their role from " + prev + " to " + new +"." + end)
             await client.delete_message(message)
+            hm.updatetoEOTW(message.author)
     else:
         m = message.content.lower()
         if ((len(message.content) == 1 and message.content in asc) or m.endswith("no u") or "no u*" in m or "no u " in m or "triple gay" in m):
@@ -203,6 +213,8 @@ async def on_reaction_add(reaction, user):
             await client.send_message(reaction.message.channel, start + mid + " is unreadable("+role+").")
             await client.send_message(client.get_channel("446871052434276352"), start + altmid + " is unreadable("+role+").")
             await client.delete_message(reaction.message)
+    elif str(reaction.message.channel) == "events":
+        await client.add_roles(user, discord.utils.get(roles, name="Events"))
 
 
 @client.event
@@ -257,22 +269,7 @@ async def ping(ctx):
             s += x + "\n"
         s += "Total: " + str(total) + "```"
         
-        orderednums = list(reversed(orderednums))
-        eb = list(reversed(eb))
-        farmroles = list(reversed(farmroles))
         
-        #plt.subplots()
-        #ax.yaxis.set_major_formatter(formatter)
-        fig = plt.figure()
-        bars = plt.bar(orderednums, eb)
-        prop = fm.FontProperties(fname='portlligatslab-regular.ttf')
-        plt.xticks(orderednums, farmroles, rotation=45, va='baseline', ha='right', fontsize=9, fontproperties=prop)
-        plt.yticks(np.arange(-1, larnum+larnum//25, step=larnum//25), fontsize=9, fontproperties=prop)
-        colors = ["#ffa64d", "#ff7f00", "#b35900", "#ffff00", "#b3b300", "#666600", "#4dff4d", "#00ff00", "#00b300", "#00ffff", "#00b3b3", "#006666", "#9999ff", "#4d4dff", "#007fff", "#ce98e7", "#b361da", "#9c30cf", "#ff00f0", "#c300b0", "#9f0090"]
-        for x in range(len(eb)):
-            bars[x].set_color(colors[x])        
-        fig.savefig("graph.png")
-        await client.send_file(ctx.message.channel, "graph.png", content = s)
         
         egg = discord.utils.get(roles, name="Eggs")
         chicken = discord.utils.get(roles, name="Chickens")
@@ -591,9 +588,75 @@ async def getlbs(ctx):
 @client.command(pass_context = True)
 async def wiki(ctx):
     response = search(ctx.message.content.split(" ", 1)[1] + " site:http://egg-inc.wikia.com")
+    s = ""
     for x in response:
-        await client.say("<"+ x +">")
-        return
+        s += "<" + x + ">\n"
+        resp = requests.get(x)
+        paragraphs = justext.justext(resp.content, justext.get_stoplist("English"))
+        for y in paragraphs:
+            if len(y.text) > 50:
+                s += y.text
+                break
+        break
+    await client.say(s)
+
+@client.command(pass_context = True)
+async def getupdaterlb(ctx):
+    file = open('updaters.json', 'r+')
+    updaters = json.load(file)
+    s = "```"
+    for k, v in sorted(updaters.items(), key = itemgetter(1), reverse = True):
+        s += k + ": " + str(v) + "\n"
+    await client.say(s + "```")
+    
+@client.command(pass_context = True)
+async def graph(ctx):
+    farmroles = []
+    eb = []
+    
+    farmers = hm.farmers_l(roles)
+    ml = ctx.message.server.members
+    larnum = 0
+    total = 0
+    acf = []
+    torev = []
+    orderednums = []
+    farmernum = 27
+    for f in reversed(farmers):
+        num = 0
+        for m in ml:
+            if f in m.roles and m not in acf:
+                num += 1
+                acf.append(m)
+        if num:
+            torev.append(str(f) + " "*(16-len(str(f))) + str(num))
+            farmroles.append(str(f).replace("farmer", ""))
+            eb.append(num)
+            orderednums.append(farmernum)
+            if num > larnum:
+                larnum = num
+        total += num
+        farmernum -= 1
+    s = "```"
+    torev = reversed(torev)
+    for x in torev:
+        s += x + "\n"
+    orderednums = list(reversed(orderednums))
+    eb = list(reversed(eb))
+    farmroles = list(reversed(farmroles))
+    
+    #plt.subplots()
+    #ax.yaxis.set_major_formatter(formatter)
+    fig = plt.figure()
+    bars = plt.bar(orderednums, eb)
+    prop = fm.FontProperties(fname='portlligatslab-regular.ttf')
+    plt.xticks(orderednums, farmroles, rotation=45, va='baseline', ha='right', fontsize=9, fontproperties=prop)
+    plt.yticks(np.arange(-1, larnum+larnum//25, step=larnum//25), fontsize=9, fontproperties=prop)
+    colors = ["#ffa64d", "#ff7f00", "#b35900", "#ffff00", "#b3b300", "#666600", "#4dff4d", "#00ff00", "#00b300", "#00ffff", "#00b3b3", "#006666", "#9999ff", "#4d4dff", "#007fff", "#ce98e7", "#b361da", "#9c30cf", "#ff00f0", "#c300b0", "#9f0090"]
+    for x in range(len(eb)):
+        bars[x].set_color(colors[x])        
+    fig.savefig("graph.png")
+    await client.send_file(ctx.message.channel, "graph.png", content = s + "```")
 
 file = open(os.path.dirname(__file__) + "/../eitok.txt")
 client.run(file.readline())

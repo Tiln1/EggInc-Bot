@@ -3,132 +3,132 @@
 01 Zzz#0270
       64,10
 02 Tiln#0416
-      63,40
+      63,56
 03 AndyVshr#1639
-      62,43
+      62,60
 04 Parker#1126
       60,64
 05 VIZE#0001
-      60,26
+      60,31
 06 XXMindGames#0441
       59,84
 07 Aggiemd91#4484
-      59,70
-08 Dexderr#2126
+      59,82
+08 SpaceCowboy5150#0840
+      59,73
+09 BosGT4#6387
+      59,69
+10 Dexderr#2126
       59,62
-09 Emporium#1013
+11 Emporium#1013
       59,58
-10 Florida#4908
+12 Florida#4908
       59,53
-11 BosGT4#6387
-      59,47
-12 Saltyii#3830
+13 Mapaliciousness#3816
+      59,42
+14 Teeg#4144
+      59,42
+15 Saltyii#3830
       59,38
-13 SmegLougainess#7354
+16 SmegLougainess#7354
       59,37
-14 DiamondSphinx#0818
+17 Elessar49#8046
+      59,29
+18 DiamondSphinx#0818
       59,28
-15 Mapaliciousness#3816
-      59,24
-16 SlytherinKyo#1039
+19 Furyroad#0546
+      59,26
+20 SlytherinKyo#1039
       59,23
-17 Furyroad#0546
-      59,21
-18 TCollett#2423
+21 Layne2216#0644
+      59,16
+22 TCollett#2423
       59,11
-19 Cantpunishme#2764
+23 Cantpunishme#2764
       59,08
-20 Senor mongoose#2227
+24 Senor mongoose#2227
       59,07
-21 Meh#0169
+25 Meh#0169
       59,06
-22 Guzik3#2079
+26 Guzik3#2079
       59,00
-23 Player3Th0mas#8008
+27 Benjamin#0007
+      59,00
+28 Player3Th0mas#8008
       58,96
-24 ViperVwV#3465
+29 ViperVwV#3465
       58,92
-25 SharxX8#0013
+30 SharxX8#0013
       58,85
-26 Guastaman#5332
+31 Guastaman#5332
       58,81
-27 D E N D E #3078
+32 D E N D E #3078
       58,69
-28 CaseyChaos#4943
+33 CaseyChaos#4943
       58,67
-29 CP27#6122
+34 CP27#6122
       58,66
-30 Agent Snowman#1759
+35 Agent Snowman#1759
       58,64
-31 Dchork#5895
+36 Dchork#5895
       58,63
-32 Notkoshka#8145
+37 Notkoshka#8145
       58,62
-33 SpaceCowboy5150#0840
-      58,60
-34 Mr.Kuifie#4006
+38 Mr.Kuifie#4006
       58,59
-35 Grayrival#7865
+39 Grayrival#7865
       58,57
-36 Trisodium phosphate#3826
+40 Katieleann#7264
+      58,56
+41 Trisodium phosphate#3826
       58,55
-37 Pudywardy#1102
+42 Phylla#8521
+      58,53
+43 Pudywardy#1102
       58,51
-38 Giveen#5391
-      58,49
-39 Cheid#7258
+44 Thatirish.kid#8682
+      58,51
+45 Giveen#5391
+      58,51
+46 Theunderachier666#4843
+      58,51
+47 Cheid#7258
       58,45
-40 Revyas#6769
+48 Revyas#6769
       58,44
-41 Phylla#8521
-      58,41
-42 Evanw68#7812
+49 Evanw68#7812
       58,38
-43 Mam711#7802
-      58,37
-44 Astrophnoob#8293
+50 Astrophnoob#8293
       58,35
-45 Diesel#3436
+51 Mam711#7802
+      58,34
+52 Diesel#3436
       58,32
-46 Rebillihp#9457
+53 Rebillihp#9457
       58,31
-47 Dissi#3495
+54 Dissi#3495
       58,28
-48 Questionable#5093
+55 Questionable#5093
       58,26
-49 Player3Th0mas#7076
+56 TheFliris#0816
+      58,25
+57 Player3Th0mas#7076
       58,21
-50 DhrMekmek#3145
+58 DhrMekmek#3145
       58,20
-51 Not Flolo#0001
+59 Not Flolo#0001
       58,19
-52 Brad 2k#3866
+60 Brad 2k#3866
       58,17
-53 XSHEDx#5895
+61 XSHEDx#5895
       58,14
-54 Jimble#3197
+62 Jimble#3197
       58,12
-55 Enthusedsloth26#9350
+63 Enthusedsloth26#9350
       58,07
-56 Jdck#0107
+64 Jdck#0107
       58,07
-57 Kot wwa#7669
+65 Kot wwa#7669
       58,07
-58 Thatirish.kid#8682
-      58,07
-59 MrGhostlore#0506
+66 MrGhostlore#0506
       58,06
-60 Moto81#5550
-      58,01
-61 Theunderachier666#4843
-      58,00
-62 Coolos#6089
-      57,98
-63 Rusty Nailgun#4209
-      57,98
-64 AppleCrumble69#6030
-      57,95
-65 Oipic#9284
-      57,94
-66 AlucardNoir#6726
-      57,91
