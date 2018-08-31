@@ -56,6 +56,10 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    if not message.server:
+        await client.process_commands(message)
+        return
+    
     global roles
     if not roles:
         roles = sorted(message.server.roles, key=lambda x: x.position, reverse=False)
@@ -641,6 +645,7 @@ async def graph(ctx):
     torev = reversed(torev)
     for x in torev:
         s += x + "\n"
+    s += "Total: " + str(total) + "```"
     orderednums = list(reversed(orderednums))
     eb = list(reversed(eb))
     farmroles = list(reversed(farmroles))
@@ -656,7 +661,7 @@ async def graph(ctx):
     for x in range(len(eb)):
         bars[x].set_color(colors[x])        
     fig.savefig("graph.png")
-    await client.send_file(ctx.message.channel, "graph.png", content = s + "```")
+    await client.send_file(ctx.message.channel, "graph.png", content = s)
 
 file = open(os.path.dirname(__file__) + "/../eitok.txt")
 client.run(file.readline())

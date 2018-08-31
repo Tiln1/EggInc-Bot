@@ -24,119 +24,119 @@
       2607
 12 SmegLougainess#7354
       1966
-13 Not Flolo#0001
+13 Brandon47#6119
+      1918
+14 Dprosk#6161
+      1477
+15 Not Flolo#0001
       1453
-14 JustMe2So#0069
+16 JustMe2So#0069
       1448
-15 Parker#1126
+17 Parker#1126
       1380
-16 Evanw68#7812
+18 Evanw68#7812
       1200
-17 Soarax#6347
+19 Soarax#6347
       1170
-18 Cheid#7258
+20 Cheid#7258
       1166
-19 Zappy#2311
+21 Zappy#2311
       1154
-20 RezoN#1721
+22 RezoN#1721
       1125
-21 Paolinification#7693
+23 Paolinification#7693
       1124
-22 Agent Snowman#1759
+24 Agent Snowman#1759
       1095
-23 Spite#4312
+25 Spite#4312
       996
-24 Brad 2k#3866
+26 Brad 2k#3866
       956
-25 Xuperstar#5832
+27 Xuperstar#5832
       856
-26 Questionable#5093
+28 Questionable#5093
       824
-27 Preditorzbware#2873
+29 Preditorzbware#2873
       811
-28 XanderRT#0552
+30 XanderRT#0552
       802
-29 Jlaws804#2182
+31 Aggiemd91#4484
+      750
+32 Jlaws804#2182
       742
-30 Aggiemd91#4484
-      687
-31 MrGhostlore#0506
+33 MrGhostlore#0506
       678
-32 Tehsoul#5061
+34 Tehsoul#5061
       671
-33 Elessar49#8046
-      591
-34 Moto81#5550
+35 Elessar49#8046
+      620
+36 Asaphlusko#5577
+      611
+37 Moto81#5550
       552
-35 Nurion#7043
+38 Nurion#7043
       540
-36 Ahosaz#9699
+39 Ahosaz#9699
       496
-37 Deegobooster#2391
+40 Deegobooster#2391
       471
-38 ViperVwV#3465
-      451
-39 Barfghost#6218
-      446
-40 Emporium#1013
-      444
 41 Senor mongoose#2227
-      425
-42 TileZ#2271
+      453
+42 ViperVwV#3465
+      451
+43 Barfghost#6218
+      446
+44 Emporium#1013
+      444
+45 Zargoff1#0007
+      436
+46 TileZ#2271
       376
-43 QuazzleTheQaz#6881
+47 QuazzleTheQaz#6881
       368
-44 QuazzleTheQaz#6881 
-      366
-45 VIZE#0001
+48 BosGT4#6387
+      359
+49 VIZE#0001
       356
-46 Benjamin#0007
+50 Pudywardy#1102
       353
-47 Pball52998#1609
+51 Pball52998#1609
       350
-48 Pudywardy#1102
-      348
-49 Numblok#0583
+52 Numblok#0583
       345
-50 Kobaia#3772
+53 Kobaia#3772
       335
-51 BosGT4#6387
-      331
-52 Notkoshka#8145
+54 Notkoshka#8145
       324
-53 CoDavis3#9073
+55 CoDavis3#9073
       320
-54 Player3Th0mas#8008
+56 Player3Th0mas#8008
       318
-55 TCollett#2423
+57 TCollett#2423
       314
-56 SkylarWeston ?#4198
+58 SkylarWeston#4198
       298
-57 Dexderr#2126
+59 Dexderr#2126
       295
-58 SlytherinKyo#1039
-      280
-59 Rebillihp#9457
+60 Layne2216#0644
+      295
+61 SlytherinKyo#1039
+      292
+62 Saltyii#3830
+      274
+63 Rebillihp#9457
       273
-60 ArkenX#0440
+64 ArkenX#0440
       268
-61 Giveen#5391
-      264
-62 Klnrnbkr#8035
+65 Florida#4908
+      268
+66 Giveen#5391
+      266
+67 Klnrnbkr#8035
       260
-63 Frisbee Reverse Trap Emmett#0891
+68 Frisbee Reverse Trap Emmett#0891
       257
-64 Jax#2985
+69 Mapaliciousness#3816
+      254
+70 Jax#2985
       252
-65 Carl#7309
-      251
-66 Astrophnoob#8293
-      251
-67 Layne2216#0644
-      250
-68 TCollett#2423 
-      241
-69 Saltyii#3830
-      241
-70 Mam711#7802
-      232
