@@ -7,7 +7,7 @@
 03 Meh#0169
       138,203
 04 BosGT4#6387
-      130,384
+      135,907
 05 Zargoff1#0007
       124,581
 06 Mystexodus#0155
@@ -78,14 +78,14 @@
       51,383
 39 SlytherinKyo#1039
       50,210
-40 Scanram#2450
+40 Alyssa295#6399
+      49,857
+41 Scanram#2450
       48,609
-41 Quail#8697
+42 Quail#8697
       48,300
-42 Rtkomar#2473
+43 Rtkomar#2473
       48,214
-43 Alyssa295#6399
-      48,179
 44 AlucardNoir#6726
       48,151
 45 Jb0426#6329
@@ -99,7 +99,7 @@
 49 Thebink#774
       45,509
 50 Dprosk#6161
-      45,186
+      45,230
 51 InfectedLeech5#8978
       44,567
 52 Againpedro#1620
@@ -112,17 +112,19 @@
       43,138
 56 Jillheather#6872
       42,980
-57 Mr.StarkZ#4342
+57 Atxdood#0517
+      42,660
+58 Mr.StarkZ#4342
       41,397
-58 Scanram#2450
+59 Scanram#2450
       40,703
-59 Senor mongoose#2227
+60 Senor mongoose#2227
       40,525
-60 Trisodium phosphate#3826
+61 Trisodium phosphate#3826
       39,786
-61 Pudywardy#1102
+62 Pudywardy#1102
       37,868
-62 Grayrival#7865
+63 Grayrival#7865
       37,788
-63 Florida#4908
+64 Florida#4908
       37,589

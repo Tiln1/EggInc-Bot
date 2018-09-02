@@ -27,7 +27,7 @@
 13 Brandon47#6119
       1918
 14 Dprosk#6161
-      1477
+      1478
 15 Not Flolo#0001
       1453
 16 JustMe2So#0069
@@ -52,91 +52,91 @@
       996
 26 Brad 2k#3866
       956
-27 Xuperstar#5832
+27 Atxdood#0517
+      913
+28 Xuperstar#5832
       856
-28 Questionable#5093
+29 Questionable#5093
       824
-29 Preditorzbware#2873
+30 Preditorzbware#2873
       811
-30 XanderRT#0552
+31 XanderRT#0552
       802
-31 Aggiemd91#4484
+32 Aggiemd91#4484
       750
-32 Jlaws804#2182
+33 Jlaws804#2182
       742
-33 MrGhostlore#0506
+34 MrGhostlore#0506
       678
-34 Tehsoul#5061
+35 Tehsoul#5061
       671
-35 Elessar49#8046
+36 Elessar49#8046
       620
-36 Asaphlusko#5577
+37 Asaphlusko#5577
       611
-37 Moto81#5550
+38 Moto81#5550
       552
-38 Nurion#7043
+39 Nurion#7043
       540
-39 Ahosaz#9699
+40 Ahosaz#9699
       496
-40 Deegobooster#2391
+41 Deegobooster#2391
       471
-41 Senor mongoose#2227
+42 Senor mongoose#2227
       453
-42 ViperVwV#3465
+43 ViperVwV#3465
       451
-43 Barfghost#6218
+44 Barfghost#6218
       446
-44 Emporium#1013
+45 Emporium#1013
       444
-45 Zargoff1#0007
+46 Zargoff1#0007
       436
-46 TileZ#2271
+47 BosGT4#6387
+      378
+48 TileZ#2271
       376
-47 QuazzleTheQaz#6881
+49 QuazzleTheQaz#6881
       368
-48 BosGT4#6387
-      359
-49 VIZE#0001
+50 VIZE#0001
       356
-50 Pudywardy#1102
+51 Pudywardy#1102
       353
-51 Pball52998#1609
+52 Pball52998#1609
       350
-52 Numblok#0583
+53 Numblok#0583
       345
-53 Kobaia#3772
+54 Kobaia#3772
       335
-54 Notkoshka#8145
+55 Notkoshka#8145
       324
-55 CoDavis3#9073
+56 CoDavis3#9073
       320
-56 Player3Th0mas#8008
+57 Player3Th0mas#8008
       318
-57 TCollett#2423
+58 TCollett#2423
       314
-58 SkylarWeston#4198
+59 SkylarWeston#4198
       298
-59 Dexderr#2126
+60 Dexderr#2126
       295
-60 Layne2216#0644
+61 Layne2216#0644
       295
-61 SlytherinKyo#1039
+62 SlytherinKyo#1039
       292
-62 Saltyii#3830
+63 Saltyii#3830
       274
-63 Rebillihp#9457
+64 Rebillihp#9457
       273
-64 ArkenX#0440
+65 ArkenX#0440
       268
-65 Florida#4908
+66 Florida#4908
       268
-66 Giveen#5391
+67 Giveen#5391
       266
-67 Klnrnbkr#8035
+68 Klnrnbkr#8035
       260
-68 Frisbee Reverse Trap Emmett#0891
+69 Frisbee Reverse Trap Emmett#0891
       257
-69 Mapaliciousness#3816
+70 Mapaliciousness#3816
       254
-70 Jax#2985
-      252

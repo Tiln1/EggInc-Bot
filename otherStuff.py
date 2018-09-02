@@ -49,7 +49,7 @@ class HelpMethods(object):
                     if role in ctx.message.server.roles:
                         if role in user.roles:
                             sucr += "\n" + str(role)
-                            await client.remove_roles(user, role)
+                            await user.remove_roles(role)
                         else: rtrnothave += "\n" + str(role)
                     else: exist += "\n" + str(role)
                 rtahave = ""
@@ -58,7 +58,7 @@ class HelpMethods(object):
                     if role in ctx.message.server.roles:
                         if role not in user.roles:
                             suca += "\n" + str(role)
-                            await client.add_roles(user, role)
+                            await user.add_roles(role)
                         else: rtahave += "\n" + str(role)
                     else: exist += "\n" + str(role)
                 string = ""
@@ -69,18 +69,18 @@ class HelpMethods(object):
                 if rtahave: string += "These roles were already on the user:" + rtahave + "\n"
                 string = string[:-1]
                 #if rtrnothave: print(rtrnothave)
-                await client.say("Successfully updated role(s)\n```" + string + " ```")
-            else: await client.say("Please format it as " + ctx.message.content.split(" ")[0] + " @username role")
-        else: await client.say("You don't have permission to use that part of that command :sweat_smile: ")
+                await ctx.message.channel.send("Successfully updated role(s)\n```" + string + " ```")
+            else: await ctx.message.channel.send("Please format it as " + ctx.message.content.split(" ")[0] + " @username role")
+        else: await ctx.message.channel.send("You don't have permission to use that part of that command :sweat_smile: ")
     
 
-    async def updatelb(self, filename, username, score, message_id, client):
+    async def updatelb(self, filename, username, score, message_id, client, message):
         file = open(filename, "r")
         content = file.read()
         file.close()
         contents = content.split("\n")
         if (len(contents)) < 2:
-            await client.send_message(client.get_channel("455512668606955541"), ("Why is the leaderboard " + filename.replace(".txt", "") + " gone on our end?"))
+            await message.channel.send("Why is the leaderboard " + filename.replace(".txt", "") + " gone on our end?")
             return
         newcontent = contents[0] + "\n" + contents[1]
         username = username.replace("_", " ")
@@ -121,9 +121,9 @@ class HelpMethods(object):
         file.write(newcontent)
         file.close()
     
-        await client.http.edit_message(message_id, "455385893537185806", newcontent)
+        await message.edit(content=newcontent)
         
-        split = client.get_channel("455512668606955541").topic.split("\n")
+        split = client.get_channel(455512668606955541).topic.split("\n")
         newstr = ""
         s = contents[-2].strip()
         if filename == "prestiges.txt": 
@@ -147,12 +147,12 @@ class HelpMethods(object):
                     newstr += "Drones: " + s
                 else: newstr += split[x] + "\n"
                 
-        await client.edit_channel(client.get_channel("455512668606955541"), topic=newstr)
-        await self.getleaderboards(client, client.get_channel("455385893537185806"), getlb=False, lb=filename.replace(".txt", ""))
+        await client.get_channel(455512668606955541).edit(topic=newstr)
+        await self.getleaderboards(client, client.get_channel(455385893537185806), getlb=False, lb=filename.replace(".txt", ""))
     
     
     async def getleaderboards(self, client, channel, getlb=True, lb=None):
-        async for x in client.logs_from(channel):
+        async for x in channel.history():
             date = str(datetime.datetime.utcnow()).replace(" ", "-").replace(":", "")
             if "Prestige Count" in x.content and (lb == None or lb == "prestiges"):
                 filer = open("prestiges.txt", "r")
