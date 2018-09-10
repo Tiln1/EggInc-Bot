@@ -33,7 +33,7 @@
 16 JustMe2So#0069
       1448
 17 Parker#1126
-      1380
+      1400
 18 Evanw68#7812
       1200
 19 Soarax#6347
@@ -71,25 +71,25 @@
 35 Tehsoul#5061
       671
 36 Elessar49#8046
-      620
-37 Asaphlusko#5577
-      611
-38 Moto81#5550
+      666
+37 Emporium#1013
+      640
+38 Asaphlusko#5577
+      618
+39 Moto81#5550
       552
-39 Nurion#7043
+40 Nurion#7043
       540
-40 Ahosaz#9699
+41 Ahosaz#9699
       496
-41 Deegobooster#2391
-      471
 42 Senor mongoose#2227
-      453
-43 ViperVwV#3465
+      488
+43 Deegobooster#2391
+      471
+44 ViperVwV#3465
       451
-44 Barfghost#6218
+45 Barfghost#6218
       446
-45 Emporium#1013
-      444
 46 Zargoff1#0007
       436
 47 BosGT4#6387
@@ -124,19 +124,19 @@
       295
 62 SlytherinKyo#1039
       292
-63 Saltyii#3830
-      274
-64 Rebillihp#9457
+63 Mapaliciousness#3816
+      292
+64 Saltyii#3830
+      283
+65 Rebillihp#9457
       273
-65 ArkenX#0440
+66 ArkenX#0440
       268
-66 Florida#4908
+67 Florida#4908
       268
-67 Giveen#5391
+68 Giveen#5391
       266
-68 Klnrnbkr#8035
+69 Klnrnbkr#8035
       260
-69 Frisbee Reverse Trap Emmett#0891
+70 Frisbee Reverse Trap Emmett#0891
       257
-70 Mapaliciousness#3816
-      254

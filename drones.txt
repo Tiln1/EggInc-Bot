@@ -1,7 +1,7 @@
 
 \*Drone Takedowns\*
 01 Giveen#5391
-      300,085
+      305,711
 02 Aggiemd91#4484
       177,008
 03 Meh#0169
@@ -13,118 +13,118 @@
 06 Mystexodus#0155
       124,342
 07 TheyCallMeMikey#2563
-      108,722
+      111,833
 08 SpaceCowboy5150#0840
       107,642
 09 Ferlessleedr#2864
       106,819
 10 Soarax#6347
       94,969
-11 Lee m#5490
+11 Emporium#1013
+      94,845
+12 Lee m#5490
       81,139
-12 Mam711#7802
+13 Elessar49#8046
+      81,040
+14 Mam711#7802
       78,701
-13 Seat15b#2671
+15 Saltyii#3830
+      77,335
+16 Seat15b#2671
       76,463
-14 Saltyii#3830
-      76,273
-15 Elessar49#8046
-      75,420
-16 Emporium#1013
-      73,877
 17 Guastaman#5332
       73,508
-18 Mr.Kuifie#4006
+18 Xenophod#6069
+      73,094
+19 Mr.Kuifie#4006
       71,180
-19 AndyVshr#1639
+20 AndyVshr#1639
       70,510
-20 NTHQ#1147
+21 NTHQ#1147
       69,489
-21 Zidome#9587
+22 Zidome#9587
       65,557
-22 Mmdrx#3756
+23 Mmdrx#3756
       64,850
-23 BattleAxe#1331
+24 Guzik3#2079
+      64,114
+25 BattleAxe#1331
       63,196
-24 Armagnacian#5309
+26 Armagnacian#5309
       63,152
-25 Astrophnoob#8293
+27 Old.grimalkin#1625
+      63,004
+28 Jb0426#6329
+      61,194
+29 Astrophnoob#8293
       61,126
-26 Shanky1807#1002
+30 Shanky1807#1002
       59,626
-27 Shelbelle93#5055
+31 Shelbelle93#5055
       58,600
-28 Pongoed#9935
+32 Pongoed#9935
       57,856
-29 Teeg#4144
+33 Teeg#4144
       57,005
-30 Xenophod#6069
-      55,536
-31 Zzz#0270
+34 Zzz#0270
       54,826
-32 Elch#0798
+35 Elch#0798
       53,827
-33 Guzik3#2079
-      53,791
-34 XXMindGames#0441
+36 XXMindGames#0441
       53,684
-35 Old Grimalkin#1625
+37 Old Grimalkin#1625
       53,344
-36 JustMe2So#0069
+38 JustMe2So#0069
       51,955
-37 Katieleann#7264
+39 Katieleann#7264
       51,394
-38 Austin Mullins#6103
+40 Austin Mullins#6103
       51,383
-39 SlytherinKyo#1039
+41 SlytherinKyo#1039
       50,210
-40 Alyssa295#6399
+42 Alyssa295#6399
       49,857
-41 Scanram#2450
+43 Mapaliciousness#3816
+      49,500
+44 Scanram#2450
       48,609
-42 Quail#8697
+45 Quail#8697
       48,300
-43 Rtkomar#2473
+46 Rtkomar#2473
       48,214
-44 AlucardNoir#6726
+47 AlucardNoir#6726
       48,151
-45 Jb0426#6329
-      47,666
-46 Cantpunishme#2764
+48 Cantpunishme#2764
       47,339
-47 Disco#4001
+49 Disco#4001
       46,644
-48 Mapaliciousness#3816
-      46,004
-49 Thebink#774
+50 Thebink#774
       45,509
-50 Dprosk#6161
+51 Dprosk#6161
       45,230
-51 InfectedLeech5#8978
+52 InfectedLeech5#8978
       44,567
-52 Againpedro#1620
+53 Againpedro#1620
       44,421
-53 Qanjorin#2938
+54 Qanjorin#2938
       43,676
-54 GreyishCat#0565
+55 GreyishCat#0565
       43,420
-55 Mfwalton91#5578
+56 Mfwalton91#5578
       43,138
-56 Jillheather#6872
+57 Jillheather#6872
       42,980
-57 Atxdood#0517
+58 Atxdood#0517
       42,660
-58 Mr.StarkZ#4342
+59 Senor mongoose#2227
+      42,523
+60 KJ#3626
+      41,799
+61 Mr.StarkZ#4342
       41,397
-59 Scanram#2450
+62 Scanram#2450
       40,703
-60 Senor mongoose#2227
-      40,525
-61 Trisodium phosphate#3826
+63 Trisodium phosphate#3826
       39,786
-62 Pudywardy#1102
+64 Pudywardy#1102
       37,868
-63 Grayrival#7865
-      37,788
-64 Florida#4908
-      37,589

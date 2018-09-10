@@ -74,7 +74,7 @@ class HelpMethods(object):
         else: await ctx.message.channel.send("You don't have permission to use that part of that command :sweat_smile: ")
     
 
-    async def updatelb(self, filename, username, score, message_id, client, message):
+    async def updatelb(self, filename, username, score, client, message):
         file = open(filename, "r")
         content = file.read()
         file.close()

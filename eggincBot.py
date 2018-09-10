@@ -87,16 +87,16 @@ async def on_message(message):
                     user = x.strip()
                 elif "," in x and user:
                     if len(x) == 5:
-                        await hm.updatelb("oom.txt", user, x, 457715280152363018, client, message)
+                        await hm.updatelb("oom.txt", user, x, client, await client.get_channel(455385893537185806).get_message(457715280152363018))
                         hm.updatetoEOTW(message.author)
                     elif len(x) < 10:
-                        await hm.updatelb("drones.txt", user, x, 457715344367288331, client, message)
+                        await hm.updatelb("drones.txt", user, x, client, await client.get_channel(455385893537185806).get_message(457715344367288331))
                         hm.updatetoEOTW(message.author)
                     elif len(x) > 14:
-                        await hm.updatelb("souleggs.txt", user, x, 457715345546018828, client, message)
+                        await hm.updatelb("souleggs.txt", user, x, client, await client.get_channel(455385893537185806).get_message(457715345546018828))
                         hm.updatetoEOTW(message.author)
                 elif user:
-                    await hm.updatelb("prestiges.txt", user, x, 457715346615566338, client, message)
+                    await hm.updatelb("prestiges.txt", user, x, client, await client.get_channel(455385893537185806).get_message(457715346615566338))
                     hm.updatetoEOTW(message.author)
         elif str(message.channel) == "role-submissions" and (message.content.startswith("+") or message.content.startswith("-")):
             time = message.created_at
@@ -224,28 +224,28 @@ async def on_reaction_add(reaction, user):
 @client.event
 async def on_member_join(member):
     Eggs = discord.utils.get(member.guild.roles, name="Eggs")
-    member.add_roles(Eggs)
+    await member.add_roles(Eggs)
 
 
 @client.command(pass_context=True)
 async def ping(ctx):
     if not str(ctx.message.author) == "Tiln#0416":
-        msg = await ctx.message.channel.send("Pong!")
+        msg = await ctx.channel.send("Pong!")
         time = math.trunc((msg.timestamp - ctx.message.timestamp).total_seconds() * 1000)
         await msg.edit(content="Pong! `" + str(time) + " ms`")
     elif str(ctx.message.author) == "Tiln#0416":
         
-        #await ctx.message.channel.send("```/*Base Format*/\n01 Bob#0000\n   0\n```")
+        #await ctx.channel.send("```/*Base Format*/\n01 Bob#0000\n   0\n```")
 #       twhr = ["🇹", "🇮", "🇱", "🇳", "🇼", "🇦", "🇸", "🇭", "🇪", "🇷", "3⃣", discord.utils.get(client.get_all_emojis(), name="tiln")]
 #       for x in twhr:
 #           await client.add_reaction(test, x)
-#       logs = yield from client.logs_from(ctx.message.channel)        
+#       logs = yield from client.logs_from(ctx.channel)        
             
         farmroles = []
         eb = []
         
         farmers = hm.farmers_l(roles)
-        ml = ctx.message.guild.members
+        ml = ctx.guild.members
         larnum = 0
         total = 0
         acf = []
@@ -329,29 +329,32 @@ async def help(ctx):
     if len(com)>1:
         c = com[1]
         if c == "calc" or c == "Calc":
-            await ctx.message.channel.send("```e!"+c+" <Soul Eggs> <Prophecy Eggs> <Soul Food Research Level> <Prophecy Bonus Research Level>\nor\ne!"+c+" <Soul Eggs> <Prophecy Eggs>\n<> Means optional (yes that does mean everything is optional)```")
+            await ctx.channel.send("```e!"+c+" <Soul Eggs> <Prophecy Eggs> <Soul Food Research Level> <Prophecy Bonus Research Level>\nor\ne!"+c+" <Soul Eggs> <Prophecy Eggs>\n<> Means optional (yes that does mean everything is optional)```")
         elif c == "ulb":
-            await ctx.message.channel.send("```e!"+c+" leaderboard Member(ascii characters only) score```")
+            await ctx.channel.send("```e!"+c+" leaderboard Member(ascii characters only) score```")
         elif c == "contract":
-            await ctx.message.channel.send("```e!"+c+" [egg laying rate(stats)] [internal hatchery rate(stats)] [time left in contract(contract page)] [farm population(stats)] <your current eggs produced(contract top layers)>(or 0) <internal hatchery calm upgrades>(or 20) <maximum hab capacity>(or 189*10^7) <maximum shipping rate>(or 311462*10^6*17)\n<> means optional\nExample: e!contract 316.804b 6440 12d11h10m35s 168m 342t 20 1.89b 5.295t```")
-        else: await ctx.message.channel.send("e!"+c+" is not currently a command.")
+            await ctx.channel.send("```e!"+c+" [egg laying rate(stats)] [internal hatchery rate(stats)] [time left in contract(contract page)] [farm population(stats)] <your current eggs produced(contract top layers)>(or 0) <internal hatchery calm upgrades>(or 20) <maximum hab capacity>(or 189*10^7) <maximum shipping rate>(or 311462*10^6*17)\n<> means optional\nExample: e!contract 316.804b 6440 12d11h10m35s 168m 342t 20 1.89b 5.295t```")
+        elif c == "nick":
+            await ctx.channel.send("e!"+c+" nick")
+        else: await ctx.channel.send("e!"+c+" is not currently a command.")
     else: base = True
     if base:
         updater = discord.utils.get(roles, name='Updater')
         s += "```e!help Displays this command\ne!calc calculates earnings bonus\ne!contract calculates how well you are doing for your contract\n"
-        if ctx.message.channel.permissions_for(ctx.message.author).manage_roles or updater in ctx.message.author.roles:
+        if ctx.channel.permissions_for(ctx.message.author).manage_roles or updater in ctx.message.author.roles:
             s += "e!ulb updates the specified leaderboard\n"
         s += "e!help [command] for help on that command```"
-        await ctx.message.channel.send(s)
+        await ctx.channel.send(s)
    
 
 @client.command(pass_context=True)
 async def calc(ctx):
     farmers = hm.farmers_l(roles)
-    cmcs = ctx.message.content
-    for x in range(11, -1, -1):
-        cmcs = cmcs.replace(" "*(2**x+1), " ")
-    cmcs = cmcs.split(" ")
+    cmcs = ctx.message.content.split(" ")
+    if len(cmcs) == 1:
+        ctx.message.content = "e!help calc"
+        await client.process_commands(ctx.message)
+        return
     amnt = len(cmcs) - 1
     if amnt > 0:
         SE = int(cmcs[1].replace(",", ""))
@@ -366,7 +369,7 @@ async def calc(ctx):
     sto = ""
     if PE > 5000:
         sto += "Infinifarmer"
-        await ctx.message.channel.send(sto + "\nEarnings bonus: Too dang high")
+        await ctx.channel.send(sto + "\nEarnings bonus: Too dang high")
     else:
         if amnt > 2 and not threemen:
             SERL = int(cmcs[3])
@@ -394,7 +397,7 @@ async def calc(ctx):
                 sto += st + "armer III"
         role = discord.utils.get(roles, name=sto)
         sto += "\nEarnings bonus: " + str("{:,}".format(num)) + "\nBonus per soul egg: " + str(BPE) + "\nTotal SE needed for next rank: " + str("{:,}".format(SEneed))
-        await ctx.message.channel.send(sto)
+        await ctx.channel.send(sto)
     if amnt > 4 or threemen:
         rta = []
         rta.append(role)
@@ -408,8 +411,10 @@ async def contract(ctx):
     for x in range(11, -1, -1):
         cmc = cmc.replace(" "*(2**x+1), " ")
     cmc = cmc.split(" ")[1:]
-    
-    
+    if len(cmc) == 0:
+        ctx.message.content = "e!help contract"
+        await client.process_commands(ctx.message)
+        return
     
     mil = 10**6
     bil = 10**9
@@ -491,10 +496,10 @@ async def contract(ctx):
             else: maxsr = math.trunc(float(cmc[7]))
         
     except IndexError:
-        await ctx.message.channel.send("Too few arguments.")  
+        await ctx.channel.send("Too few arguments.")  
         return
     except ValueError:
-        await ctx.message.channel.send("Wrong number formatting.")   
+        await ctx.channel.send("Wrong number formatting.")   
         return
         
     elrpc = elr / cc
@@ -519,7 +524,7 @@ async def contract(ctx):
         fel = str("{:.3f}".format(el/bil)) + "B"
     elif el > mil:
         fel = str("{:.3f}".format(el/mil)) + "M"
-    await ctx.message.channel.send("You will have produced approximately " + fel + " eggs by the time the given time period ends.")
+    await ctx.channel.send("You will have produced approximately " + fel + " eggs by the time the given time period ends.")
     
 
 
@@ -527,7 +532,7 @@ async def contract(ctx):
 async def ulb(ctx):
     updater = discord.utils.get(roles, name='Updater')
     com = ctx.message.content.split(" ")
-    if ctx.message.channel.permissions_for(ctx.message.author).manage_roles or updater in ctx.message.author.roles:
+    if ctx.channel.permissions_for(ctx.message.author).manage_roles or updater in ctx.message.author.roles:
         if len(com) == 4:
             s = ""
             if com[1] == "prestiges":
@@ -547,8 +552,8 @@ async def ulb(ctx):
 #             else:
 #                 for x in ackr:
 #                     await ctx.message.add_reaction(x)
-        else: await ctx.message.channel.send("Please format it as " + com[0] + " category member score")
-    else: await ctx.message.channel.send("You don't have permission to use that command :sweat_smile: ")
+        else: await ctx.channel.send("Please format it as " + com[0] + " category member score")
+    else: await ctx.channel.send("You don't have permission to use that command :sweat_smile: ")
 
 
 @client.command(pass_context = True)
@@ -572,7 +577,7 @@ async def role(ctx):
     farmers = hm.farmers_l(roles)
     if eb.endswith("%"):
         eb = eb[:-3]
-    await ctx.message.channel.send(farmers[len(eb)-1])
+    await ctx.channel.send(farmers[len(eb)-1])
     
 
 @client.command(pass_context = True)
@@ -585,8 +590,8 @@ async def killbot(ctx):
 @client.command(pass_context = True)
 async def getlbs(ctx):
     updater = discord.utils.get(roles, name='Updater')
-    if ctx.message.channel.permissions_for(ctx.message.author).manage_roles or updater in ctx.message.author.roles:
-        await hm.getleaderboards(client, discord.utils.get(ctx.message.guild.channels, id=455385893537185806))
+    if ctx.channel.permissions_for(ctx.message.author).manage_roles or updater in ctx.message.author.roles:
+        await hm.getleaderboards(client, discord.utils.get(ctx.guild.channels, id=455385893537185806))
 
 
 @client.command(pass_context = True)
@@ -602,7 +607,7 @@ async def wiki(ctx):
                 s += y.text
                 break
         break
-    await ctx.message.channel.send(s)
+    await ctx.channel.send(s)
 
 @client.command(pass_context = True)
 async def getupdaterlb(ctx):
@@ -611,7 +616,7 @@ async def getupdaterlb(ctx):
     s = "```"
     for k, v in sorted(updaters.items(), key = itemgetter(1), reverse = True):
         s += k + ": " + str(v) + "\n"
-    await ctx.message.channel.send(s + "```")
+    await ctx.channel.send(s + "```")
     
 @client.command(pass_context = True)
 async def graph(ctx):
@@ -622,7 +627,7 @@ async def graph(ctx):
     farmers.append(discord.utils.get(roles, name="Eggs"))
     for x in hm.farmers_l(roles):
         farmers.append(x)
-    ml = ctx.message.guild.members
+    ml = ctx.guild.members
     larnum = 0
     total = 0
     acf = []
@@ -665,7 +670,7 @@ async def graph(ctx):
     for x in range(len(eb)):
         bars[x].set_color(colors[x])        
     fig.savefig("graph.png")
-    await ctx.message.channel.send(file=discord.File("graph.png"), content=s)
+    await ctx.channel.send(file=discord.File("graph.png"), content=s)
 
 file = open(os.path.dirname(__file__) + "/../eitok.txt")
 client.run(file.readline())
